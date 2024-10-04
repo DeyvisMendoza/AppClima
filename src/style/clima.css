@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+
+/* Estilos generales */
+form {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    border-radius: 15px;
+    padding: 20px;
+    color: #f1f1f1; /* Color de texto claro */
+}
+
+form h1 {
+    font-family: "Lilita One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #f9f9f9; /* Color de título claro */
+}
+
+.boton {
+    background-color: #6db0dc !important; /* Botón con tono azul para destacar */
+    color: #ffffff; /* Texto del botón blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #2980b9; /* Efecto hover con un tono más oscuro */
+}
+
+.img {
+    width: 100px;
+    border-radius: 50%; /* Si la imagen es cuadrada, esto la hace circular */
+}
+
+.header {
+    text-align: center;
+    font-family: "Lilita One", system-ui;
+    font-weight: 400;
+    color: #f9f9f9; /* Color de texto claro */
+}
+
+.header h2 {
+    font-size: 1.6rem;
+    color: #e1e1e1; /* Texto del subtítulo con un tono claro */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    form h1 {
+        font-size: 1.3rem;
+    }
+
+    .img {
+        width: 80px;
+    }
+
+    .header h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    form h1 {
+        font-size: 1.1rem;
+    }
+
+    .img {
+        width: 60px;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+    }
+}

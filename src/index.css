@@ -1,0 +1,190 @@
+/* index.css */
+
+/* Centrado vertical y horizontal */
+body.light-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0, #e0e0e0, #d0d0d0); /* Degradado claro */
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+  color: #000; /* Color de texto oscuro */
+}
+
+body.dark-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a, #2b2b2b); /* Degradado oscuro */
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+  color: #000000; /* Color de texto blanco */
+}
+
+/* Animación mejorada del fondo */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#root {
+  width: 100%; /* Asegura que el contenedor raíz ocupe todo el ancho disponible */
+  max-width: 1200px; /* O el ancho máximo deseado */
+  padding: 20px; /* Espaciado interno */
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos comunes */
+form {
+  width: 600px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 15px;
+  padding: 20px;
+  color: #f1f1f1; /* Color de texto claro (esto se cambiará según el modo) */
+}
+
+form h1 {
+  font-family: "Lilita One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+body.light-mode .boton {
+  background-color: #c6c6c6 !important; /* Botón con tono azul para destacar */
+  color: #000000; /* Texto del botón blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.dark-mode .boton{
+  background-color: #01090f !important; /* Botón con tono azul para destacar */
+  color: #ffffff; /* Texto del botón blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #2980b9; /* Efecto hover con un tono más oscuro */
+}
+
+.img {
+  width: 100px;
+  border-radius: 50%; /* Si la imagen es cuadrada, esto la hace circular */
+}
+
+.header {
+  text-align: center;
+  font-family: "Lilita One", system-ui;
+  font-weight: 400;
+}
+
+.header h2 {
+  font-size: 1.6rem;
+}
+
+/* Estilos para el modo claro */
+body.light-mode form {
+  background-color: #f0f0f0; /* Fondo claro */
+  color: #000; /* Texto oscuro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+
+body.light-mode form h1 {
+  color: #333; /* Color del título oscuro */
+}
+
+body.light-mode .header {
+  color: #333; /* Color del texto de encabezado oscuro */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode form {
+  background-color: #1a1a1a; /* Fondo oscuro más suave */
+  color: #f1f1f1; /* Texto claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  border-radius: 8px; /* Bordes redondeados para un mejor estilo */
+}
+
+
+body.dark-mode form h1 {
+  color: #f9f9f9; /* Color del título claro */
+}
+
+body.dark-mode .header {
+  color: #f9f9f9; /* Color del texto de encabezado claro */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  form h1 {
+    font-size: 1.3rem;
+  }
+
+  .img {
+    width: 80px;
+  }
+
+  .header h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    width: 100%;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  form h1 {
+    font-size: 1.1rem;
+  }
+
+  .img {
+    width: 60px;
+  }
+
+  .header h2 {
+    font-size: 1.2rem;
+  }
+}
